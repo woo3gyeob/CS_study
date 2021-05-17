@@ -81,9 +81,13 @@ ___
 
 - 2021.05.09
   - OSI 7계층
-
 - 2021.05.16
-  - etc..
+  - 브라우저에 url을 입력하면 일어나는 일들
+  - TCP vs UDP
+- 2021.05.23
+  - IP
+  - Encoding vs Decoding
+  - HTTP vs HTTPS
 
 
 
