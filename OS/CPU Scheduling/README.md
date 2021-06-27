@@ -48,7 +48,7 @@
 - **`프로세스의 도착 순서대로`** cpu를 점유한다.
 - 먼저 도착한 작업의 cpu burst가 길고 뒤의 작입이 cpu burst가 짧으면, 대기시간이 길어져서 비효율 적이다.
 
-
+<br>
 
 ### `SJF` (Shortest-Job-First)
 
@@ -62,7 +62,7 @@
 - 비선점(Nonpreemtive)으로서 중도에 cpu를 빼앗기지 않는다.
 - 비선점으로 인하여 FCFS와 마찬가지로 작업 중인 프로세스의 cpu burst가 길면, 기다리는 cpu의 대기시간이 길어질 수 있다.
 
-
+<br>
 
 ### `SRTF` (Shortest-Remaining-Time-First, Preemptive SJF)
 
@@ -74,7 +74,7 @@
 - SJF와 SRTF의 공통적인 문제점은 Starving(기아) 현상에 있다. CPU Burst가 긴 작업은 다른 짧은 시간의 작업에 밀려서, 극단적인 상황에서는 cpu를 전혀 사용하지 못할 수도 있다.
 - CPU Burst의 시간은 과거의 CPU burst 시간을 통해 예측한다. 그것은 Exponential Averaging이란 계산식을 통해 도출한다. 이 계산식은 최근의 작업시간을 그 전의 작업 시간보다 더 많이 고려하여 예상 시간을 도출하는 방식을 가진다.
 
-
+<br>
 
 ### Priority Scheduling
 
@@ -85,9 +85,9 @@
 - Starving(기아 현상)이 발생할 수 있다. SJF와 마찬가지로 우선순위가 낮은 프로세스가 전혀 cpu를 점유하지 못하는 경우가 발생할 수 있다.
 - 해결책으로 **`Aging`**을 우선순위에 반영한다. 기다리는 시간이 길 수록, 우선순위를 점차 높히는 방식이다.
 
+<br>
 
-
-### RR Round Robin
+### RR (Round Robin)
 
 ![image-20210627172500112](README.assets/image-20210627172500112.png)
 
@@ -99,7 +99,7 @@
 - 할당 시간이 길면 : FCFS와 같아짐. 먼저 도착한 것이 먼저 끝나게 된다.
 - 할당 시간이 짧으면 : 문맥 교환으로 인한 오버헤드가 과도하게 발생한다.
 
-
+<br>
 
 ### Multilevel Queue
 
@@ -110,7 +110,7 @@
 - 각 queue마다 사용하는 스케줄링 알고리즘이 다르다. foreground의 경우 RR 방식, Backgournd의 경우 FCFS를 사용한다.
 - Queue 간의 시간 점유 시간의 격차가 크면 클수록 기아 현상이 일어날 가능성이 높다. 그러므로 Time Slice를 통해 각 큐의 CPU time을 적절하게 할당해야 한다.
 
-
+<br>
 
 ### Multilevel Feedback Queue
 
